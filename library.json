@@ -1,0 +1,24 @@
+{
+  "name": "AmpereHeure",
+  "version": "2.0.1",
+  "description": "Compteur d'AMPERE-HEURES pour ESP8266. Integrateur PUR : dAh = I x dt / 3600, rien d'autre. Horodatage micros() avec gestion du debordement (~70 min), cumuls BRUTS charges et decharges separes (tous deux positifs), filtrage exponentiel, addCharge() pour injecter des Ah deja integres. Aucune physique : ni rendement faradique, ni Peukert, ni etat de charge, ni capacite batterie, ni autonomie — ces politiques appartiennent au projet utilisateur. Pour un cumul de longue duree, preferer Fo170/CoulombsAh (accumulateur int64 a deux etages) : en float32 l'ULP depasse l'increment des ~50 Ah. Dependance unique : Arduino.h.",
+  "keywords": "ampere-heure, ampere-hours, ah, batterie, battery, soc, coulometre, esp8266, ina226, persistance",
+  "authors": [
+    {
+      "name": "Olivier FOURNET",
+      "email": "olivier.fournet@free.fr",
+      "url": "https://github.com/Fo170",
+      "maintainer": true
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fo170/AmpereHeure.git"
+  },
+  "license": "GPL-3.0-only",
+  "frameworks": "arduino",
+  "platforms": "espressif8266",
+  "headers": [
+    "AmpereHeure.h"
+  ]
+}
